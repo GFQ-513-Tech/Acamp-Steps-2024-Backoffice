@@ -3,37 +3,47 @@ let camperViewTable = document.getElementById('camperView');
 const manipulateSingleData = function (displayMethod, data) {
     displayMethod === 'complete' ?  camperViewTable = document.getElementById('camperViewComplete') : camperViewTable = document.getElementById('camperViewSimplify');
 
-    camperViewTable.getElementsByClassName('id-result-search')[0].innerText = data.ID;
-    camperViewTable.getElementsByClassName('name-result-search')[0].innerText = `${data.Nome} ${data.Sobrenome}`;
-    camperViewTable.getElementsByClassName('age-result-search')[0].innerText = getAge(data.DataNascimento);
+    camperViewTable.getElementsByClassName('id-result-search')[0].innerText = data.id;
+    camperViewTable.getElementsByClassName('name-result-search')[0].innerText = `${data.name}`;
+    camperViewTable.getElementsByClassName('age-result-search')[0].innerText = getAge(data.birthDate);
+    camperViewTable.getElementsByClassName('sex-result-search')[0].innerText = data.sex;
     
-    if(getAge(data.DataNascimento) >= 18){
-        document.getElementById('rowAdultResponsible1').classList.add('d-none');
-        document.getElementById('rowAdultResponsible2').classList.add('d-none');
+    if (getAge(data.birthDate) >= 18){
+        document.getElementById('rowAdultResponsibleName').classList.add('d-none');
+        document.getElementById('rowAdultResponsibleName2').classList.add('d-none');
+        document.getElementById('rowAdultResponsibleDocument').classList.add('d-none');
+        document.getElementById('rowAdultResponsibleDocument2').classList.add('d-none');
+        document.getElementById('rowAdultResponsiblePhone').classList.add('d-none');
     } else {
-        camperViewTable.getElementsByClassName('adult-result-search')[0].innerText = data.NomeResponsavel;
-        document.getElementById('rowAdultResponsible1').classList.remove('d-none');
-        document.getElementById('rowAdultResponsible2').classList.remove('d-none');
+        camperViewTable.getElementsByClassName('adult-result-search')[0].innerText = data.responsiblePersonName;
+        camperViewTable.getElementsByClassName('adult-result-search')[1].innerText = data.responsiblePersonDocument;
+        camperViewTable.getElementsByClassName('adult-result-search')[2].innerHTML = `<a href="tel:${data.responsiblePersonPhone}">${data.responsiblePersonPhone}</a>`;
+        document.getElementById('rowAdultResponsibleName').classList.remove('d-none');
+        document.getElementById('rowAdultResponsibleName2').classList.remove('d-none');
+        document.getElementById('rowAdultResponsibleDocument').classList.remove('d-none');
+        document.getElementById('rowAdultResponsibleDocument2').classList.remove('d-none');
+        document.getElementById('rowAdultResponsiblePhone').classList.remove('d-none');
     }
 
-    camperViewTable.getElementsByClassName('telefone-result-search')[0].innerText = `(${data.DDD}) ${data.Telefone}`;
-    camperViewTable.getElementsByClassName('church-result-search')[0].innerText = data.Igreja;
-    camperViewTable.getElementsByClassName('email-result-search')[0].innerText = data.Email;
-    camperViewTable.getElementsByClassName('payment-result-search')[0].innerText = data.Pagamento;
+    camperViewTable.getElementsByClassName('telefone-result-search')[0].innerHTML = `<a href="tel:${data.phone}">${data.phone}</a>`;
+    camperViewTable.getElementsByClassName('church-result-search')[0].innerText = data.church;
+    camperViewTable.getElementsByClassName('email-result-search')[0].innerText = data.email;
+    camperViewTable.getElementsByClassName('payment-result-search')[0].innerText = data.payment;
+    camperViewTable.getElementsByClassName('ticket-result-search')[0].innerText = data.ticket;
 
     if (displayMethod === 'complete') {
-        camperViewTable.getElementsByClassName('surname-result-search')[0].innerText = data.Apelido;
-        camperViewTable.getElementsByClassName('allergy-result-search')[0].innerText = data.Alergias;
-        camperViewTable.getElementsByClassName('medicines-result-search')[0].innerText = data.Remedios;
+        camperViewTable.getElementsByClassName('surname-result-search')[0].innerText = data.surname;
+        camperViewTable.getElementsByClassName('allergy-result-search')[0].innerText = data.allergies;
+        camperViewTable.getElementsByClassName('medicines-result-search')[0].innerText = data.medicines;
 
         // Checkin fluxes
-        if (data.Checkin) {
-            camperViewTable.getElementsByClassName('checkin-result-search')[0].innerText = data.Checkin;
+        if (data.checkinDate) {
+            camperViewTable.getElementsByClassName('checkin-result-search')[0].innerText = data.checkinDate;
             document.getElementById('rowCheckin').classList.remove('d-none');
             document.getElementById('checkinButton').classList.add('d-none');
 
-            if(data.Checkout) {
-                camperViewTable.getElementsByClassName('checkout-result-search')[0].innerText = data.Checkout;
+            if(data.checkoutDate) {
+                camperViewTable.getElementsByClassName('checkout-result-search')[0].innerText = data.checkoutDate;
                 document.getElementById('rowCheckout').classList.remove('d-none');
                 document.getElementById('checkoutButton').classList.add('d-none');
             } else {
@@ -68,11 +78,11 @@ const createRow = function (table, data, position) {
     name.classList.add('name-result-search', 'row-table');
     church.classList.add('church-result-search', 'row-table');
 
-    id.innerHTML = data[position].ID;
-    name.innerHTML = `${data[position].Nome} ${data[position].Sobrenome}`;
-    church.innerHTML = data[position].Igreja;
+    id.innerHTML = data[position].id;
+    name.innerHTML = `${data[position].name}`;
+    church.innerHTML = data[position].church;
 
-    row.setAttribute('id', `row-${data[position].ID}`);
+    row.setAttribute('id', `row-${data[position].id}`);
     row.setAttribute('onclick', `camperView(id)`);
 
     row.appendChild(id);

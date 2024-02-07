@@ -44,14 +44,14 @@
     <script src="../../utils/tools.js"></script>
 
     <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="../../../public/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../public/steps/steps-logo-white.png" type="image/x-icon">
 
     <title>APP Backoffice</title>
 </head>
 
 <body>
     <header id="header">
-        <img class="img-fluid" src="../../../public/deeper-white.png" alt="">
+        <img class="img-fluid" src="../../../public/gfq/gfq-logo-branco.svg" alt="">
     </header>
 
     <button type="button" class="btn back-button" id="backButton" onclick="backStep();">
@@ -107,21 +107,22 @@
                         <div class="form-floating">
                             <select required="" inputmode="select" class="form-control field" name="church" id="church">
                                 <option value="" selected disabled="">Opções para escolha</option>
-                                <option value="ieq-aguavermelha">IEQ - Água Vermelha</option>
-                                <option value="ieq-azulville">IEQ - Azulville</option>
-                                <option value="ieq-boavista">IEQ - Boa Vista</option>
-                                <option value="ieq-botafogo">IEQ - Botafogo</option>
-                                <option value="ieq-cruzeiro">IEQ - Cruzeiro do Sul</option>
-                                <option value="ieq-descalvado">IEQ - Descalvado</option>
-                                <option value="ieq-ibate">IEQ - Ibaté</option>
-                                <option value="ieq-itirapina">IEQ - Itirapina</option>
-                                <option value="ieq-tangara">IEQ - Jardim Tangará</option>
-                                <option value="ieq-jockeyclub">IEQ - Jockey Club</option>
-                                <option value="ieq-planaltoparaiso">IEQ - Planalto Paraiso</option>
-                                <option value="ieq-ribeiraobonito">IEQ - Ribeirão Bonito</option>
-                                <option value="ieq-santafelicia">IEQ - Santa Felícia</option>
-                                <option value="ieq-vilabrasilia">IEQ - Vila Brasília</option>
-                                <option value="outra-igreja">Outra</option>
+                                <option value="0">IEQ - Água Vermelha</option>
+                                <option value="1">IEQ - Azulville</option>
+                                <option value="2">IEQ - Boa Vista</option>
+                                <option value="3">IEQ - Botafogo</option>
+                                <option value="4">IEQ - Cruzeiro do Sul</option>
+                                <option value="5">IEQ - Descalvado</option>
+                                <option value="6">IEQ - Ibaté</option>
+                                <option value="7">IEQ - Itirapina</option>
+                                <option value="8">IEQ - Jardim Tangará</option>
+                                <option value="9">IEQ - Jockey Club</option>
+                                <option value="A">IEQ - Planalto Paraiso</option>
+                                <option value="B">IEQ - Ribeirão Bonito</option>
+                                <option value="C">IEQ - Santa Felícia</option>
+                                <option value="D">IEQ - Vila Brasília</option>
+                                <option value="E">Outra</option>
+                                <option value="F">Nenhuma</option>
                             </select>
 
                             <label for="church">Igreja</label>
@@ -218,14 +219,14 @@
                                     <td class="age-result-search"></td>
                                 </tr>
 
-                                <tr id="rowAdultResponsible1">
+                                <tr>
                                     <th scope="row">
                                         <span class="field-result-search">
-                                            <i class="fa-regular fa-user"></i>
-                                            Responsável
+                                            <i class="fa-solid fa-venus-mars"></i>
+                                            Sexo
                                         </span>
                                     </th>
-                                    <td class="adult-result-search"></td>
+                                    <td class="sex-result-search"></td>
                                 </tr>
 
                                 <tr>
@@ -236,6 +237,36 @@
                                         </span>
                                     </th>
                                     <td class="telefone-result-search"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            E-mail
+                                        </span>
+                                    </th>
+                                    <td class="email-result-search"></td>
+                                </tr>
+
+                                <tr id="rowAdultResponsibleName">
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-regular fa-user"></i>
+                                            Responsável
+                                        </span>
+                                    </th>
+                                    <td class="adult-result-search"></td>
+                                </tr>
+
+                                <tr id="rowAdultResponsibleDocument">
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-regular fa-user"></i>
+                                            RG Responsável
+                                        </span>
+                                    </th>
+                                    <td class="adult-result-search"></td>
                                 </tr>
 
                                 <tr>
@@ -251,21 +282,21 @@
                                 <tr>
                                     <th scope="row">
                                         <span class="field-result-search">
-                                            <i class="fa-solid fa-envelope"></i>
-                                            E-mail
-                                        </span>
-                                    </th>
-                                    <td class="email-result-search"></td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">
-                                        <span class="field-result-search">
                                             <i class="fa-solid fa-credit-card"></i>
                                             Pagamento
                                         </span>
                                     </th>
                                     <td class="payment-result-search payment"></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-solid fa-ticket-simple"></i>
+                                            Ingresso
+                                        </span>
+                                    </th>
+                                    <td class="ticket-result-search ticket"></td>
                                 </tr>
 
                             </tbody>
@@ -358,14 +389,14 @@
                                     <td class="age-result-search"></td>
                                 </tr>
 
-                                <tr id="rowAdultResponsible2">
+                                <tr>
                                     <th scope="row">
                                         <span class="field-result-search">
-                                            <i class="fa-regular fa-user"></i>
-                                            Responsável
+                                            <i class="fa-solid fa-venus-mars"></i>
+                                            Sexo
                                         </span>
                                     </th>
-                                    <td class="adult-result-search"></td>
+                                    <td class="sex-result-search"></td>
                                 </tr>
 
                                 <tr>
@@ -381,6 +412,46 @@
                                 <tr>
                                     <th scope="row">
                                         <span class="field-result-search">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            E-mail
+                                        </span>
+                                    </th>
+                                    <td class="email-result-search"></td>
+                                </tr>
+
+                                <tr id="rowAdultResponsibleName2">
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-regular fa-user"></i>
+                                            Responsável
+                                        </span>
+                                    </th>
+                                    <td class="adult-result-search"></td>
+                                </tr>
+
+                                <tr id="rowAdultResponsibleDocument2">
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-regular fa-user"></i>
+                                            RG Responsável
+                                        </span>
+                                    </th>
+                                    <td class="adult-result-search"></td>
+                                </tr>
+
+                                <tr id="rowAdultResponsiblePhone">
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-solid fa-mobile"></i>
+                                            Telefone Responsável
+                                        </span>
+                                    </th>
+                                    <td class="adult-result-search"></td>
+                                </tr>                                
+
+                                <tr>
+                                    <th scope="row">
+                                        <span class="field-result-search">
                                             <i class="fa-solid fa-cross"></i>
                                             Igreja
                                         </span>
@@ -391,21 +462,21 @@
                                 <tr>
                                     <th scope="row">
                                         <span class="field-result-search">
-                                            <i class="fa-solid fa-envelope"></i>
-                                            E-mail
-                                        </span>
-                                    </th>
-                                    <td class="email-result-search"></td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">
-                                        <span class="field-result-search">
                                             <i class="fa-solid fa-credit-card"></i>
                                             Pagamento
                                         </span>
                                     </th>
                                     <td class="payment-result-search payment"></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <span class="field-result-search">
+                                            <i class="fa-solid fa-ticket-simple"></i>
+                                            Ingresso
+                                        </span>
+                                    </th>
+                                    <td class="ticket-result-search ticket"></td>
                                 </tr>
 
                                 <tr>

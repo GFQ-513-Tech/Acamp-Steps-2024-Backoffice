@@ -1,7 +1,7 @@
 const getAllUsers = async (params) => {
     try {
         var urlServer = '';
-        params ? urlServer = `${urlAPIServer}${userModule}${allUsersEndpoint}?${params}` : urlServer = `${urlAPIServer}${userModule}${allUsersEndpoint}`;
+        params ? urlServer = `${urlAPIServer}/${userModule}?${params}` : urlServer = `${urlAPIServer}/${userModule}`;
 
         const response = await fetch(urlServer);
     

@@ -15,12 +15,17 @@
 
 /*Odd rows of table*/
 #simplifyResultSearch, #singleResultSearch tr:nth-child(odd) {
-    background-color: #2e619844;
+    background-color: rgba(45, 55, 72, 0.419);
 }
 
 /*Even table rows*/
 #simplifyResultSearch, #singleResultSearch tr:nth-child(even) {
     background-color: #2e619818;
+}
+
+#simplifyResultSearch a, #singleResultSearch a {
+    font-weight: bold;
+    color: #1f432e;
 }
 
 /*Class applied in the payment field*/

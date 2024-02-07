@@ -1,12 +1,10 @@
-const urlAPIServer = `http://localhost:3001/`
-const userModule = `user/`
+const urlAPIServer = `http://localhost:3000/api/v1`
+const userModule = `users`
 const registerModule = `register/`
 const paymentModule = `payment/`
-const allUsersEndpoint = `getUsers/`
 const singleUserEndpoint = `getSingleUser/`
 const registerCheckinEndpoint = `checkin/`
 const registerCheckoutEndpoint = `checkout/`
-const getPaymentsEndpoint = `getPayments/`
 
 const getAge = function (date) {
     const today = new Date();
@@ -42,8 +40,8 @@ const copyToClipboard = async () => {
     const response = await getAllUsers('checkin=true');
     let content = '';
 
-    for (let i = 0; i < response.data.data.length; i++) {
-        const user = response.data.data[i];
+    for (let i = 0; i < response.data.docs.length; i++) {
+        const user = response.data.docs[i];
         content += `${user.Nome} ${user.Sobrenome}` + '\n';
     }
 

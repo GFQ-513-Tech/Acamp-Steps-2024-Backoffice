@@ -10,7 +10,7 @@
     "description": "Site de gestão backoffice Acampamento Quadrangular Região 513",
     "icons": [
         {
-            "src": "../../public/logo.png",
+            "src": "../../public/steps/steps-logo-white.png",
             "sizes": "189x189",
             "type": "image/png"
         }
