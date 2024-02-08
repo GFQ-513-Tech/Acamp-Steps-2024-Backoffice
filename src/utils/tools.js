@@ -43,9 +43,9 @@ const copyToClipboard = async () => {
     const response = await getAllUsers('checkin=true');
     let content = '';
 
-    for (let i = 0; i < response.data.docs.length; i++) {
-        const user = response.data.docs[i];
-        content += `${user.Nome} ${user.Sobrenome}` + '\n';
+    for (let i = 0; i < response.data.data.docs.length; i++) {
+        const user = response.data.data.docs[i];
+        content += `${user.name}` + '\n';
     }
 
     navigator.clipboard.writeText(content);
