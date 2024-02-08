@@ -44,7 +44,7 @@ O aplicativo contém três módulos principais:
 - [X] Consultar pagamentos filtrando por Igreja;
 - [X] Consultar inscritos por Igreja;
 
-## 📫 Contribuindo para QR Code Generator
+## 📫 Contribuindo para Acamp Steps 2024 - Backoffice
 
 Para contribuir com o projeto, siga estas etapas:
 
