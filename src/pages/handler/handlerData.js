@@ -17,7 +17,7 @@ const manipulateSingleData = function (displayMethod, data) {
     } else {
         camperViewTable.getElementsByClassName('adult-result-search')[0].innerText = data.responsiblePersonName;
         camperViewTable.getElementsByClassName('adult-result-search')[1].innerText = data.responsiblePersonDocument;
-        camperViewTable.getElementsByClassName('adult-result-search')[2].innerHTML = `<a href="tel:${data.responsiblePersonPhone}">${data.responsiblePersonPhone}</a>`;
+        displayMethod === 'complete' ? camperViewTable.getElementsByClassName('adult-result-search')[2].innerHTML = `<a href="tel:${data.responsiblePersonPhone}">${data.responsiblePersonPhone}</a>` : null;
         document.getElementById('rowAdultResponsibleName').classList.remove('d-none');
         document.getElementById('rowAdultResponsibleName2').classList.remove('d-none');
         document.getElementById('rowAdultResponsibleDocument').classList.remove('d-none');
@@ -38,12 +38,12 @@ const manipulateSingleData = function (displayMethod, data) {
 
         // Checkin fluxes
         if (data.checkinDate) {
-            camperViewTable.getElementsByClassName('checkin-result-search')[0].innerText = data.checkinDate;
+            camperViewTable.getElementsByClassName('checkin-result-search')[0].innerText = formatDate(data.checkinDate);
             document.getElementById('rowCheckin').classList.remove('d-none');
             document.getElementById('checkinButton').classList.add('d-none');
 
             if(data.checkoutDate) {
-                camperViewTable.getElementsByClassName('checkout-result-search')[0].innerText = data.checkoutDate;
+                camperViewTable.getElementsByClassName('checkout-result-search')[0].innerText = formatDate(data.checkoutDate);
                 document.getElementById('rowCheckout').classList.remove('d-none');
                 document.getElementById('checkoutButton').classList.add('d-none');
             } else {

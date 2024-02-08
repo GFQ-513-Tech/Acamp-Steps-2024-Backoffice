@@ -1,7 +1,6 @@
 const getUsersByChurch = async (params) => {
     try {
-        var urlServer = '';
-        params ? urlServer = `${urlAPIServer}${paymentModule}${getPaymentsEndpoint}${params}` : urlServer = `${urlAPIServer}${paymentModule}${getPaymentsEndpoint}`;
+        var urlServer = `${urlAPIServer}/${reportsByChurchModule}/${params}`;
 
         const response = await fetch(urlServer);
     

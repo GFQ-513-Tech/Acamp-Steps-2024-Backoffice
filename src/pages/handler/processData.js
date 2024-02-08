@@ -23,6 +23,7 @@ async function onScanSuccess(qrCodeMessage) {
 }
 
 async function onCodeSuccess(codeMessage) {
+    if (!codeMessage) return;
     IDUser = codeMessage;
     await processFind(codeMessage);
 }
@@ -206,5 +207,5 @@ const renderTable = async () => {
 const findCamperByChurch = async (church) => {
     disableSection('churchRoute');
     spinner.on();
-    await processFind(`ALL?church=${church}`);
+    await processFind(`${church}`);
 }

@@ -1,5 +1,5 @@
 const registerCheckin = async (id) => {
-    const urlServer = `${urlAPIServer}${registerModule}${registerCheckinEndpoint}${id}`
+    const urlServer = `${urlAPIServer}/${registerCheckinEndpoint}`
 
     const response = await fetch(urlServer, {
         method: 'POST',
@@ -7,9 +7,7 @@ const registerCheckin = async (id) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "values": [
-                [getDate()]
-            ]
+            "userId": `${id}`,
         })
     });
 
