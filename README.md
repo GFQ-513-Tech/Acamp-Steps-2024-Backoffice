@@ -1,40 +1,48 @@
-# **Acamp2023 Backoffice**
+<br/>
+<h1 align="center"> Acamp Steps 2024 - Backoffice</h1>
 
-<img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="Bootstrap4" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<p align="center">Este projeto é um Progressive Web Aplication (PWA) construído utilizando essencialmente HTML5, CSS3, Bootstrap e JavaScript. O objetivo principal é permitir que a equipe de frente de trabalho do evento consiga gerenciar inscrições, realizar check-in e check-out dos acampantes, bem como também visualizar os medicamentos/alergias utilizados por cada acampante. O grande diferencial deste projeto é a sua simplicidade, rapidez e portabilidade!
+Esse aplicativo é ideal para permitir que o time de gestão do evento consiga visualizar e registrar informações de cada acampante, proporcionando uma experiência informativa e interativa para os usuários da aplicação.</p>
 
-</br>
+<p align="center">
+  <img src="https://github.com/Acamp-Steps-2024/Acamp-Steps-2024/assets/83319546/03371770-a284-478a-84fa-18a4c452be88" alt="Logo" width="30%">
+  <img src="https://github.com/Acamp-Steps-2024/Acamp-Steps-2024/assets/83319546/b8f94e5c-de88-430d-9756-359872b7d0bb" alt="Logo" width="30%">
+  <img src="https://github.com/Acamp-Steps-2024/Acamp-Steps-2024/assets/83319546/353e3d01-2a3c-42e1-ab1d-25e933d1c9f5" alt="Logo" width="30%">
+</p>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/joaolucasp/Acamp2023-Backoffice)
 ![GitHub language count](https://img.shields.io/github/languages/count/joaolucasp/Acamp2023-Backoffice?style=plastic)
 ![GitHub forks](https://img.shields.io/github/forks/joaolucasp/Acamp2023-Backoffice)
 ![GitHub open issues](https://img.shields.io/github/issues/joaolucasp/Acamp2023-Backoffice)
 
-![img1](https://user-images.githubusercontent.com/83319546/218206962-eed14318-11e4-4666-9bb3-c87af3bd8a2d.png)
-![img2](https://user-images.githubusercontent.com/83319546/218206972-b34f92df-36d0-4f21-88be-1e45568c0cd6.png)
-![img3](https://user-images.githubusercontent.com/83319546/218206976-0b61bd93-0cae-445b-bdb0-678af8fe8e0e.png)
-![img4](https://user-images.githubusercontent.com/83319546/218206985-5788f747-f987-4026-8cf9-bbbe07ae8a56.png)
-> Este projeto contempla um WEB App de Backoffice para a equipe do Acampamento 2023.
+
+
+> Este projeto contempla um PWA (Progressive Web Apliction) de Backoffice para a equipe de gestão do Acampamento 2024.
+
+## 🔎 Tecnologias
+
+<img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="Bootstrap4" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 
 ## 📲 Features
 
 O aplicativo contém três módulos principais:
 
-> Check-in
-- [x] Realização de check-in via QR Code;
-- [x] Realização de checki-in via código;
-- [ ] Realização de check-out via QR Code;
-- [ ] Realização de checki-out via código;
+> Frente de Trabalho
+- [X] Realização de check-in via QR Code;
+- [X] Realização de checki-in via código;
+- [X] Realização de check-out via QR Code;
+- [X] Realização de check-out via código;
 
 > Dados
-- [ ] Consultar dados de um usuário via QR Code;
-- [ ] Consultar dados de um usuário via código;
-- [ ] Consultar dados de um usuário pesquisando por nome;
-- [ ] Registrar um usuário na base de dados;
+- [X] Consultar dados de um usuário via QR Code;
+- [X] Consultar dados de um usuário via código;
+- [X] Consultar dados de um usuário pesquisando por nome;
+- [X] Registrar um usuário na base de dados;
 
 > Igreja
-- [ ] Consultar acampantes filtrando por Igreja;
-- [ ] Consultar pagamentos filtrando por Igreja;
-- [ ] Consultar inscritos por Igreja;
+- [X] Consultar acampantes filtrando por Igreja;
+- [X] Consultar pagamentos filtrando por Igreja;
+- [X] Consultar inscritos por Igreja;
 
 ## 📫 Contribuindo para QR Code Generator
 
