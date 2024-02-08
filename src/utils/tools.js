@@ -1,12 +1,8 @@
-const urlAPIServer = `http://localhost:3001/`
-const userModule = `user/`
-const registerModule = `register/`
-const paymentModule = `payment/`
-const allUsersEndpoint = `getUsers/`
-const singleUserEndpoint = `getSingleUser/`
-const registerCheckinEndpoint = `checkin/`
-const registerCheckoutEndpoint = `checkout/`
-const getPaymentsEndpoint = `getPayments/`
+const urlAPIServer = `http://localhost:3000/api/v1`
+const userModule = `users`
+const reportsByChurchModule = `reports/inscriptions/resume-by-church`
+const registerCheckinEndpoint = `frontdesk/checkin`
+const registerCheckoutEndpoint = `frontdesk/checkout`
 
 const getAge = function (date) {
     const today = new Date();
@@ -26,6 +22,11 @@ const getDate = () => {
     return stringDate = ((date.getHours() < 9 ? `0${date.getHours()}` : date.getHours()) + ":" + (date.getMinutes() < 9 ? `0${date.getMinutes()}` : date.getMinutes()) + " & " + date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear());
 }
 
+const formatDate = (date) => {
+    let newDate = new Date(date);
+    return stringDate = ((newDate.getHours() < 9 ? `0${newDate.getHours()}` : newDate.getHours()) + ":" + (newDate.getMinutes() < 9 ? `0${newDate.getMinutes()}` : newDate.getMinutes()) + " | " + newDate.getDate() + "/" + (newDate.getMonth() + 1) + "/" + newDate.getFullYear());
+}
+
 const setCssExtendContent = function () {
     const css = document.getElementById('cssContent');
 
@@ -42,8 +43,8 @@ const copyToClipboard = async () => {
     const response = await getAllUsers('checkin=true');
     let content = '';
 
-    for (let i = 0; i < response.data.data.length; i++) {
-        const user = response.data.data[i];
+    for (let i = 0; i < response.data.docs.length; i++) {
+        const user = response.data.docs[i];
         content += `${user.Nome} ${user.Sobrenome}` + '\n';
     }
 

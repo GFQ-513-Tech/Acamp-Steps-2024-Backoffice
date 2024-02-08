@@ -9,18 +9,23 @@
     width: 130px !important;
 }
 
-#simplifyResultSearch, #singleResultSearch td, th{
+#simplifyResultSearch td, #singleResultSearch td, th{
     font-size: 16px;
 }
 
 /*Odd rows of table*/
-#simplifyResultSearch, #singleResultSearch tr:nth-child(odd) {
-    background-color: #2e619844;
+#simplifyResultSearch tr:nth-child(odd), #singleResultSearch tr:nth-child(odd) {
+    background-color: rgba(45, 55, 72, 0.419);
 }
 
 /*Even table rows*/
-#simplifyResultSearch, #singleResultSearch tr:nth-child(even) {
+#simplifyResultSearch tr:nth-child(even), #singleResultSearch tr:nth-child(even) {
     background-color: #2e619818;
+}
+
+#simplifyResultSearch a, #singleResultSearch a {
+    font-weight: bold;
+    color: #1f432e;
 }
 
 /*Class applied in the payment field*/

@@ -23,6 +23,7 @@ async function onScanSuccess(qrCodeMessage) {
 }
 
 async function onCodeSuccess(codeMessage) {
+    if (!codeMessage) return;
     IDUser = codeMessage;
     await processFind(codeMessage);
 }
@@ -41,19 +42,19 @@ const processFind = async (query) => {
 
     switch (response.status) {
         case 200:
-            if (response.data.totalItems === 0) {
+            if (response.data.data.totalDocs === 0) {
                 nextScreen = 'notContent';
                 break;
             }
 
             if (routeActive === 'nameRoute' || routeActive === 'churchRoute' || routeActive === 'tableView') {
-                const users = response.data.data;
+                const users = response.data.data.docs;
                 manipulateAllData(users);
                 nextScreen = 'tableView';
                 setCssExtendContent();
 
             } else {
-                const user = response.data.data[0];
+                const user = response.data.data;
                 let displayMethod;
 
                 moduleActive === 'checkin' ? displayMethod = 'simplify' : displayMethod = 'complete';
@@ -171,8 +172,8 @@ const camperView = async (id) => {
 
     switch (response.status) {
         case 200:
-            const user = response.data.data[0];
-            IDUser = user.ID;
+            const user = response.data.data;
+            IDUser = user.id;
             manipulateSingleData('complete', user);
             nextScreen = 'camperViewComplete';
             setCssExtendContent();
@@ -206,5 +207,5 @@ const renderTable = async () => {
 const findCamperByChurch = async (church) => {
     disableSection('churchRoute');
     spinner.on();
-    await processFind(`ALL?church=${church}`);
+    await processFind(`${church}`);
 }

@@ -16,7 +16,7 @@
 .button-success {
     width: var(--buttons-widht);
     height: var(--buttons-height);
-    background: #0ea130 !important;
+    background: #2d3748 !important;
     color: var(--white) !important;
     border-radius: 50px;
     text-transform: uppercase;
