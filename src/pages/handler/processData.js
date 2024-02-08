@@ -66,7 +66,8 @@ const processFind = async (query) => {
                     setCssExtendContent()
                 } else {
                     nextScreen = 'camperViewSimplify';
-                    setCssDefaultContent();
+                    setCssExtendContent()
+                    //setCssDefaultContent();
                 }
             }
             break;

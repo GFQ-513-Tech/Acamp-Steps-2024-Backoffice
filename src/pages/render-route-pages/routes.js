@@ -187,7 +187,8 @@ const backStep = function () {
 
                 case 'camperViewSimplify':
                     disableSection('camperViewSimplify');
-                    setCssDefaultContent();
+                    setCssExtendContent();
+                    //setCssDefaultContent();
                     localStorage.getItem('first-route') == 'find-by-scanner-route' ? activeScannerScreen() : activeSection('codeRoute');
                     break;
 
