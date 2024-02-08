@@ -205,6 +205,7 @@ const renderTable = async () => {
 }
 
 const findCamperByChurch = async (church) => {
+    if (!church) return;
     disableSection('churchRoute');
     spinner.on();
     await processFind(`${church}`);
