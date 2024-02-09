@@ -63,6 +63,9 @@ const manipulateSingleData = function (displayMethod, data) {
 
 const manipulateAllData = function (data) {
     const table = document.getElementById('multipleResultSearch');
+    const totalDocsHtml = document.getElementById('totalResultSearch');
+
+    totalDocsHtml.innerHTML = `Total de Registros: ${data.length}`
 
     for (let i = 0; i < data.length; i++) {
         createRow(table, data, i);
@@ -95,6 +98,9 @@ const createRow = function (table, data, position) {
 
 const clearTable = function () {
     const table = document.getElementById('multipleResultSearch');
+    const totalDocsHtml = document.getElementById('totalResultSearch');
+
+    totalDocsHtml.innerHTML = "";
     
     for (let i = table.rows.length - 1; i > 0; i--) {
         table.deleteRow(i);

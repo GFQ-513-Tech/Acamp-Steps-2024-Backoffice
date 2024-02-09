@@ -1,4 +1,4 @@
-const urlAPIServer = `http://192.168.1.196:3000/api/v1`
+const urlAPIServer = `https://api.gfq513.com.br/api/v1`
 const userModule = `users`
 const reportsByChurchModule = `reports/inscriptions/resume-by-church`
 const registerCheckinEndpoint = `frontdesk/checkin`
