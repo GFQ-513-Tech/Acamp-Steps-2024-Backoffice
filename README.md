@@ -10,13 +10,6 @@ Esse aplicativo é ideal para permitir que o time de gestão do evento consiga v
   <img src="https://github.com/Acamp-Steps-2024/Acamp-Steps-2024/assets/83319546/353e3d01-2a3c-42e1-ab1d-25e933d1c9f5" alt="Logo" width="30%">
 </p>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/joaolucasp/Acamp2023-Backoffice)
-![GitHub language count](https://img.shields.io/github/languages/count/joaolucasp/Acamp2023-Backoffice?style=plastic)
-![GitHub forks](https://img.shields.io/github/forks/joaolucasp/Acamp2023-Backoffice)
-![GitHub open issues](https://img.shields.io/github/issues/joaolucasp/Acamp2023-Backoffice)
-
-
-
 > Este projeto contempla um PWA (Progressive Web Apliction) de Backoffice para a equipe de gestão do Acampamento 2024.
 
 ## 🔎 Tecnologias
